@@ -15,6 +15,7 @@
 		C629916129DC945200198438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C629915F29DC945200198438 /* LaunchScreen.storyboard */; };
 		C629916D29DC995300198438 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C629916C29DC995300198438 /* WelcomeViewController.swift */; };
 		C629916F29DCBFEC00198438 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C629916E29DCBFEC00198438 /* AboutMeViewController.swift */; };
+		C629917129DCC8E400198438 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C629917029DCC8E400198438 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C629916229DC945200198438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C629916C29DC995300198438 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C629916E29DCBFEC00198438 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		C629917029DCC8E400198438 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				C629915829DC945100198438 /* LogInViewController.swift */,
 				C629916C29DC995300198438 /* WelcomeViewController.swift */,
 				C629916E29DCBFEC00198438 /* AboutMeViewController.swift */,
+				C629917029DCC8E400198438 /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				C629916F29DCBFEC00198438 /* AboutMeViewController.swift in Sources */,
 				C629916D29DC995300198438 /* WelcomeViewController.swift in Sources */,
 				C629915529DC945100198438 /* AppDelegate.swift in Sources */,
+				C629917129DCC8E400198438 /* InfoViewController.swift in Sources */,
 				C629915729DC945100198438 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

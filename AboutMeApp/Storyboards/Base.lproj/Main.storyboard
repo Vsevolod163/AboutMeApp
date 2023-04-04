@@ -21,12 +21,18 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o4I-42-T7l">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="lOr-WI-ySG"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxC-tY-gjc">
                                         <rect key="frame" x="0.0" y="42" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="gGe-vn-8z8"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLE-eE-L3d">
                                         <rect key="frame" x="0.0" y="84" width="240" height="34.5"/>
@@ -190,6 +196,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="About Me" id="Znm-Ro-rLb">
                         <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="ulv-Nj-meu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="Hct-cV-xsc" kind="show" id="kim-Iz-wJV"/>
                             </connections>
@@ -203,17 +210,17 @@
             </objects>
             <point key="canvasLocation" x="2362.5" y="767.95774647887322"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="Dh1-Pt-tvn">
             <objects>
-                <viewController id="Hct-cV-xsc" sceneMemberID="viewController">
+                <viewController id="Hct-cV-xsc" customClass="InfoViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eaa-8A-CS2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WdE-8k-v96">
                                 <rect key="frame" x="16" y="33" width="288" height="515"/>
-                                <mutableString key="text">Hello, User! 😊 My name is Vsevolod Lashin. I am 27 years old. I graduated from the Samara State University of Economics with a master's degree in world economics with honors. I work as a Sales Manager for a company that sells automotive paints produced by the Dutch multinational company Akzonobel. Several of my projects were the implementation of the Akzonobel software packages for various automotive workshops. I've always liked math and programming, so I decided to start studying programming a year ago and I want to start working in this industry in the near future. My favourite hobbies are: programming, watching movies, listening to music. Also i love to play volleyball, basketball, table tennis. Looking forward to hearing from you! 😊</mutableString>
+                                <string key="text">Hello, User! 😊 My name is Vsevolod Lashin. I am 27 years old. I graduated from the Samara State University of Economics with a master's degree in world economics with honors. I work as a Sales Manager for a company that sells automotive paints produced by the Dutch multinational company Akzonobel. Several of my projects were the implementation of the Akzonobel software packages for various automotive workshops. I've always liked math and programming, so I decided to start studying programming a year ago and I want to start working in this industry in the near future. My favourite hobbies are: programming, watching movies, listening to music. Also i love to play volleyball, basketball, table tennis. Looking forward to hearing from you! 😊</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -240,8 +247,9 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LgF-tx-ip2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2tL-VO-hgp">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="7jA-5E-L0q" kind="relationship" relationship="viewControllers" id="C3C-Ap-HrY"/>
@@ -255,19 +263,27 @@
         <!--Navigation Controller-->
         <scene sceneID="F5u-On-yiB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jmp-3v-kih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VzL-wQ-n15" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="0i4-iP-DTm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="YCI-Qr-zzd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="4PY-76-Bv0" kind="relationship" relationship="rootViewController" id="okc-Ts-VlT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jmp-3v-kih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1652" y="768"/>
         </scene>

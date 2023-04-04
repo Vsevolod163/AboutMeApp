@@ -13,7 +13,7 @@ class AboutMeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         myPhotoImageView.layer.cornerRadius = myPhotoImageView.frame.width / 2
+        view.addGradientLayer()
     }
 }
