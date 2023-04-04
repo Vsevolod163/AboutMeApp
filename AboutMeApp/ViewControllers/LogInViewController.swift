@@ -27,14 +27,16 @@ final class LogInViewController: UIViewController {
         guard let viewControllers = tabBarController.viewControllers else { return }
         
         viewControllers.forEach { viewController in
-            if let firstVC = viewController as? WelcomeViewController {
-                firstVC.userName = userNameTF.text
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = userNameTF.text
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let aboutMeVC = navigationVC.topViewController as? AboutMeViewController else { return }
+                aboutMeVC.userName = userName
             }
         }
     }
     
     @IBAction private func unwind(for segue: UIStoryboardSegue) {
-        userNameTF.text = ""
         passwordTF.text = ""
     }
     
