@@ -9,15 +9,17 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
         
-    @IBOutlet var welcomeLabel: UILabel!
+    @IBOutlet private var welcomeLabel: UILabel!
+    @IBOutlet private var myNameLabel: UILabel!
     
-    var userName: String!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addGradientLayer()
         
-        welcomeLabel.text = "Welcome, \(userName ?? "")!"
+        welcomeLabel.text = "Welcome, \(user.userName ?? "")!"
+        myNameLabel.text = "My name is \(user.person.name) \(user.person.surname)"
     }
     
 }

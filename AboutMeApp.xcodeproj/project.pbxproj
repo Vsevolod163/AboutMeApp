@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C60A07D329DCED3600A1F127 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A07D229DCED3600A1F127 /* User.swift */; };
 		C629915529DC945100198438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C629915429DC945100198438 /* AppDelegate.swift */; };
 		C629915729DC945100198438 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C629915629DC945100198438 /* SceneDelegate.swift */; };
 		C629915929DC945100198438 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C629915829DC945100198438 /* LogInViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C60A07D229DCED3600A1F127 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C629915129DC945100198438 /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C629915429DC945100198438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C629915629DC945100198438 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		C629916B29DC955B00198438 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C60A07D229DCED3600A1F127 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				C629916F29DCBFEC00198438 /* AboutMeViewController.swift in Sources */,
 				C629916D29DC995300198438 /* WelcomeViewController.swift in Sources */,
 				C629915529DC945100198438 /* AppDelegate.swift in Sources */,
+				C60A07D329DCED3600A1F127 /* User.swift in Sources */,
 				C629917129DCC8E400198438 /* InfoViewController.swift in Sources */,
 				C629915729DC945100198438 /* SceneDelegate.swift in Sources */,
 			);

@@ -9,18 +9,22 @@ import UIKit
 
 final class LogInViewController: UIViewController {
     
+    // MARK: - properties
     
-    @IBOutlet var userNameTF: UITextField!
-    @IBOutlet var passwordTF: UITextField!
+    @IBOutlet private var userNameTF: UITextField!
+    @IBOutlet private var passwordTF: UITextField!
     
-    private let userName = "Alexey"
-    private let password = "123"
+    private let user = User.getUser()
+    
+    // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameTF.text = userName
-        passwordTF.text = password
+        userNameTF.text = user.userName
+        passwordTF.text = user.password
     }
+    
+    // MARK: - segue functions
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
@@ -28,10 +32,10 @@ final class LogInViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = userNameTF.text
+                welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let aboutMeVC = navigationVC.topViewController as? AboutMeViewController else { return }
-                aboutMeVC.userName = userName
+                aboutMeVC.user = user
             }
         }
     }
@@ -40,19 +44,26 @@ final class LogInViewController: UIViewController {
         passwordTF.text = ""
     }
     
+    // MARK: - buttons functions
     
     @IBAction func forgotData(_ sender: UIButton) {
         switch sender.tag {
         case 0:
-            showAlert(with: "No problem!", and: "Your username is Alexey 😊")
+            showAlert(
+                with: "No problem!",
+                and: "Your username is \(user.userName ?? "") 😊"
+            )
         default:
-            showAlert(with: "No problem!", and: "Your password is 123 😊")
+            showAlert(
+                with: "No problem!",
+                and: "Your password is \(user.password ?? "") 😊"
+            )
         }
     }
     
     
     @IBAction func logInButtonTapped() {
-        guard userNameTF.text == userName, passwordTF.text == password else {
+        guard userNameTF.text == user.userName, passwordTF.text == user.password else {
             showAlert(
                 with: "Invalid username or password 😔",
                 and: "Please, enter correct username and password"
@@ -62,6 +73,8 @@ final class LogInViewController: UIViewController {
         }
         performSegue(withIdentifier: "showWelcomeTBC", sender: nil)
     }
+    
+    // MARK: - showAlert
     
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(
@@ -76,6 +89,8 @@ final class LogInViewController: UIViewController {
         present(alert, animated: true)
     }
 }
+
+// MARK: - extensions
 
 extension UIView {
     func addGradientLayer() {
