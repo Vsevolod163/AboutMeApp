@@ -5,6 +5,8 @@
 //  Created by Vsevolod Lashin on 05.04.2023.
 //
 
+import Foundation
+
 struct User {
     let userName: String!
     let password: String!
@@ -25,6 +27,7 @@ struct Person {
     let dateOfBirth: String
     let gitHub: String
     let photo: String
+    let info: String
     
     static func getPerson() -> Person {
         Person(
@@ -32,7 +35,16 @@ struct Person {
             surname: "Lashin",
             dateOfBirth: "12.06.1995",
             gitHub: "Vsevolod163",
-            photo: "myPhoto"
+            photo: "myPhoto",
+            info: """
+                Hello! 😊
+                My name is Vsevolod Lashin. I am 27 years old.
+                I graduated from the Samara State University of Economics with a master's degree in world economics with honors.
+                Now I am working as a Sales Manager for a company that sells automotive paints produced by the Dutch multinational company AkzoNobel. Several of my projects were the implementation of the Akzonobel software packages for various automotive workshops.
+                I've always liked math and programming, so I decided to start studying it a year ago and I want to start working in this industry in the near future.
+                My favourite hobbies are: programming, watching movies, listening to music. Also i love to play volleyball, basketball, table tennis.
+                Looking forward to hearing from you! 😊
+            """
         )
     }
 }
