@@ -21,5 +21,4 @@ final class InfoViewController: UIViewController {
         fullNameNabigationItem.title = "\(user.person.fullName) Info"
         infoLabel.text = user.person.info
     }
-
 }
