@@ -220,10 +220,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dateOfBirthLabel" destination="w2Z-GB-W7Z" id="8JM-oF-5d8"/>
+                        <outlet property="fullNameNavigationItem" destination="Znm-Ro-rLb" id="rL2-O9-9r4"/>
                         <outlet property="gitHubLabel" destination="bcX-Iv-e4y" id="RHu-Sk-ZHh"/>
-                        <outlet property="myNameNavigationItem" destination="Znm-Ro-rLb" id="rL2-O9-9r4"/>
-                        <outlet property="myPhotoImageView" destination="nv4-WD-GPI" id="8Lb-x5-del"/>
                         <outlet property="nameLabel" destination="bs0-ct-k4u" id="uwE-vx-AUf"/>
+                        <outlet property="photoImageView" destination="nv4-WD-GPI" id="8Lb-x5-del"/>
                         <outlet property="surnameLabel" destination="Icf-S6-PcI" id="eFa-v2-pd4"/>
                     </connections>
                 </viewController>
@@ -257,6 +257,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="02p-zj-AiQ"/>
                     <connections>
+                        <outlet property="fullNameNabigationItem" destination="02p-zj-AiQ" id="aw1-uD-kF6"/>
                         <outlet property="infoLabel" destination="WdE-8k-v96" id="YoB-a6-CxN"/>
                     </connections>
                 </viewController>

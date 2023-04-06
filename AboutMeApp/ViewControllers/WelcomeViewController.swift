@@ -19,7 +19,7 @@ final class WelcomeViewController: UIViewController {
         view.addGradientLayer()
         
         welcomeLabel.text = "Welcome, \(user.userName ?? "")!"
-        myNameLabel.text = "My name is \(user.person.name) \(user.person.surname)"
+        myNameLabel.text = "My name is \(user.person.fullName)"
     }
     
 }

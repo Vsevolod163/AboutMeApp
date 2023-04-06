@@ -11,11 +11,14 @@ final class InfoViewController: UIViewController {
 
     @IBOutlet private var infoLabel: UILabel!
     
+    @IBOutlet var fullNameNabigationItem: UINavigationItem!
+    
     var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addGradientLayer()
+        fullNameNabigationItem.title = "\(user.person.fullName) Info"
         infoLabel.text = user.person.info
     }
 

@@ -29,6 +29,12 @@ struct Person {
     let photo: String
     let info: String
     
+    var fullName: String {
+        get {
+            name + " " + surname
+        }
+    }
+        
     static func getPerson() -> Person {
         Person(
             name: "Vsevolod",
@@ -38,6 +44,7 @@ struct Person {
             photo: "myPhoto",
             info: """
                 Hello! 😊
+                
                 My name is Vsevolod Lashin. I am 27 years old.
                 I graduated from the Samara State University of Economics with a master's degree in world economics with honors.
                 Now I am working as a Sales Manager for a company that sells automotive paints produced by the Dutch multinational company AkzoNobel. Several of my projects were the implementation of the Akzonobel software packages for various automotive workshops.
